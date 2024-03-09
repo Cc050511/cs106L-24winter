@@ -31,7 +31,7 @@ int main() {
 
   write_courses_not_offered(vector_of_courses);
 
-  FILE *pipe = popen("python3 utils/autograder.py", "r");
+  FILE *pipe = _popen("python utils\\autograder.py", "r");
   if (!pipe)
     return -1;
 
@@ -40,7 +40,7 @@ int main() {
     if (fgets(buffer, 128, pipe) != NULL)
       std::cout << buffer;
   }
-  pclose(pipe);
+  _pclose(pipe);
 
   // uncomment this line to debug
   // print_vector(vector_of_courses);

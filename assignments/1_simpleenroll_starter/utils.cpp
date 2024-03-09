@@ -78,7 +78,6 @@ void write_courses_offered(std::vector<Course> &vector_of_courses) {
   // STUDENT TODO: implement this function
   std::ofstream file(COURSES_OFFERED_CSV_PATH);
   if (file.is_open()) {
-    file << "title,number_of_units,quarter\n";
     for(int i = 0; i < vector_of_courses.size(); ++i) {
       if (vector_of_courses[i].quarter != "null") {
         file << vector_of_courses[i].title << ',' << vector_of_courses[i].number_of_units << ',' << vector_of_courses[i].quarter << '\n';
@@ -104,7 +103,6 @@ void write_courses_not_offered(std::vector<Course> &vector_of_courses) {
   // STUDENT TODO: implement this function
   std::ofstream file(COURSES_NOT_OFFERED_CSV_PATH);
   if (file.is_open()) {
-    file << "title,number_of_units,quarter\n";
     for (auto &v : vector_of_courses) {
       file << v.title << ',' << v.number_of_units << ',' << v.quarter << '\n';
     }
