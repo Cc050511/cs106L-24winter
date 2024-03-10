@@ -2,6 +2,11 @@
 #include "User.h"
 
 // TODO: Implement the non-member function + operator overload here!
+User&& operator+(User &lhs, User &rhs) {
+    rhs.friends.insert(std::move(lhs));
+    lhs.friends.insert(std::move(rhs));
+    return std::move(lhs);
+}
 
 
 void printFriends(const User& user) {

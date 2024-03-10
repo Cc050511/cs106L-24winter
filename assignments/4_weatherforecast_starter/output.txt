@@ -1,0 +1,24 @@
+max temperatures: 
+32
+26
+21
+15
+10
+21
+15
+min temperatures: 
+21
+15
+10
+4
+-1
+10
+4
+average temperatures: 
+26.2
+20.6
+15.2
+9.6
+4.2
+15.4
+9.6

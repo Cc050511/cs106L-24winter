@@ -1,4 +1,5 @@
 #include "class.h"
+#include <iostream>
 
 /*
  * Assigment 3: Make a class!
@@ -14,5 +15,11 @@
 
 int main() {
   // initialize class and run this file
+  cat c{5, "daju"};
+  std::cout << c.getAge() << std::endl;
+  c.setAge(6);
+  std::cout << c.getAge() << std::endl;
+  cat cc;
+  std::cout << cc.getAge() << std::endl;
   return 0;
 }
